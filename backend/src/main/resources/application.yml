@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/job_hunting_db
+    username: postgres
+    password: your_password          # 環境変数 DB_PASSWORD で上書き推奨
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      # 開発中は update / 本番は validate + Flyway を使う
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  jackson:
+    time-zone: Asia/Tokyo
+
+server:
+  port: 8080
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.orm.jdbc.bind: TRACE

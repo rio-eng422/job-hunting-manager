@@ -1,0 +1,56 @@
+# ===== Java / Maven =====
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+!.mvn/wrapper/maven-wrapper.jar
+!.mvn/wrapper/maven-wrapper.properties
+
+# ===== Spring Boot / 環境設定 =====
+# application.yml はテンプレートとしてコミットする
+# 実際の認証情報は application-local.yml や .env に書いてここで除外
+application-local.yml
+application-local.properties
+.env
+.env.*
+
+# ===== IDE =====
+.idea/
+*.iml
+*.iws
+*.ipr
+.eclipse/
+.project
+.classpath
+.settings/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ===== OS =====
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# ===== React / Node (フロントエンド - 後で追加予定) =====
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# ===== ログ =====
+*.log
+logs/
